@@ -5,6 +5,7 @@
 - [Code review 的重要性](#code-review-的重要性)
   - [Table of Contents](#table-of-contents)
   - [1.目的](#1目的)
+  - [2.code review check list](#2code-review-check-list)
   - [3.注意事項](#3注意事項)
   - [4.Fun Facts](#4fun-facts)
 
@@ -22,6 +23,8 @@
     2.如何實踐
 
 ---
+
+## 2.code review check list
 
 - **是否符合公司之編碼習慣**：
   在編寫的代碼中，使用的方式不是較好或存在不合理的地方，例如：for 循環中 break,continue 的方式，通常的循环都可以先寫 break，再寫 continue。
