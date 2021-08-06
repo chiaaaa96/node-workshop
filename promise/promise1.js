@@ -1,5 +1,5 @@
 let doWork = fuction (job, timer, isOK) {
-  return new promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     console.log("in promise");
     setTimeout(() => {
       let dt = new Date();
@@ -18,6 +18,6 @@ job.then{
     console.log("第一個函式被呼叫".resolve);
   },
   function(reject) {
-    console.log("第二個函式被呼叫".resolve);
+    console.log("第二個函式被呼叫".reject);
   }
 );
