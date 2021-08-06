@@ -22,6 +22,9 @@ job1
     console.log("第一個函式被呼叫", resolve);
     return doWork("喝豆漿", 1000, true);
   })
+  .then((resolve) => {
+    console.log("第一個函式被呼叫", resolve);
+  })
   .catch((reject) => {
     console.log("reject", error);
   })
