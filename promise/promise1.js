@@ -14,10 +14,10 @@ let doWork = function (job, timer, isOK) {
 
 let job = doWork("刷牙", 3000, true);
 job.then(
-  function (resolve) {
-    console.log("第一個函式被呼叫", resolve);
+  function(resolve) {
+    console.log("第一個函式被呼叫",resolve);
   },
-  function (reject) {
-    console.log("第二個函式被呼叫", reject);
+  function(reject) {
+    console.log("第二個函式被呼叫",reject);
   }
 );
