@@ -8,7 +8,7 @@ async function stockdata() {
       if (err) {
         reject(err);
       } else {
-        resolve(stockCode);
+        resolve(stockCode.trim());
       }
     });
   });
