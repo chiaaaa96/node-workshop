@@ -3,8 +3,12 @@ const express = require("express");
 // 利用 express 建立了一個 express application
 let app = express();
 
+//處理cors問題，放在所有路由中間件前面
+const cors = require("cors");
+app.use(cors());
+
 //app.use使用一個「中間件」
-//handler
+//app.use(handler)
 //順序很重要
 app.use((request, response, next) => {
   let current = new Date();
