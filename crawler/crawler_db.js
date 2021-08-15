@@ -31,19 +31,24 @@ async function stockdata() {
 
   // 不關閉連線，認為程式一直在執行
   connection.end();
+
+  //   let response = await axios.get(
+  //     "https://www.twse.com.tw/exchangeReport/STOCK_DAY",
+  //     {
+  //       params: {
+  //         response: "json",
+  //         date: moment().format("YYYYMMDD"),
+  //         stockNo: stockCode,
+  //       },
+  //     }
+  //   );
+  //   console.log(response.data.title);
 }
 
-//   let response = await axios.get(
-//     "https://www.twse.com.tw/exchangeReport/STOCK_DAY",
-//     {
-//       params: {
-//         response: "json",
-//         date: moment().format("YYYYMMDD"),
-//         stockNo: stockCode,
-//       },
-//     }
-//   );
-//   console.log(response.data.title);
-// }
-
 // stockdata();
+
+try {
+  stockdata();
+} catch (e) {
+  console.error(e);
+}
