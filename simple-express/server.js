@@ -5,6 +5,7 @@ let app = express();
 
 //app.use使用一個「中間件」
 //handler
+//順序很重要
 app.use((request, response, next) => {
   let current = new Date();
   console.log(`有人來囉！ at ${current.toISOString()}`);
@@ -24,6 +25,10 @@ app.get("/", function (request, response, next) {
 
 app.get("/about", function (requset, response, next) {
   response.send("About");
+});
+//404，放所有路由的最下面
+app.use((requset, response, next) => {
+  response.status(404).json({ message: "Not Found" });
 });
 
 app.listen(3000, function () {
